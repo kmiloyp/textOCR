@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR y Corrección Gramatical</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">OCR y Corrección Gramatical</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="upload-form" method="POST" enctype="multipart/form-data">
+                    <div id="drop-zone" class="upload-container mb-4">
+                        <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                        <h4>Arrastra un archivo o haz clic para seleccionar</h4>
+                        <p class="text-muted">Formatos soportados: PDF, JPG, PNG</p>
+                        <input type="file" id="file-input" name="file" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('file-input').click()">
+                            Seleccionar Archivo
+                        </button>
+                        <p id="file-name" class="mt-2">No se ha seleccionado archivo</p>
+                    </div>
+
+                    <div id="progress-container" class="d-none">
+                        <div class="progress mb-3">
+                            <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                                 role="progressbar" style="width: 100%"></div>
+                        </div>
+                        <p class="text-center">Procesando archivo...</p>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Procesar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</body>
+</html>
