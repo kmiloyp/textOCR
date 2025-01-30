@@ -14,4 +14,6 @@ dependencies = [
     "psycopg2-binary>=2.9.10",
     "pytesseract>=0.3.13",
     "requests>=2.32.3",
+    "sift-stack-py>=0.3.3",
+    "streamlit>=1.41.1",
 ]
