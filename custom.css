@@ -1,0 +1,30 @@
+.upload-container {
+    border: 2px dashed var(--bs-secondary);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.drag-over {
+    border-color: var(--bs-primary);
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.file-input {
+    display: none;
+}
+
+.correction {
+    border-left: 3px solid var(--bs-warning);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.original-text {
+    white-space: pre-wrap;
+    font-family: monospace;
+    padding: 1rem;
+    background-color: rgba(var(--bs-dark-rgb), 0.05);
+    border-radius: 0.5rem;
+}
